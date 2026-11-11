@@ -1,4 +1,4 @@
-﻿"""Offline packaging checks. These do not assess factual correctness."""
+"""Offline packaging checks. These do not assess factual correctness."""
 import argparse
 import re
 from pathlib import Path
@@ -17,7 +17,7 @@ PUBLIC = (
     "README.md", "README.pt-BR.md", "LICENSE", "THIRD_PARTY_NOTICES.md",
     "SECURITY.md", "CONTRIBUTING.md", "CHANGELOG.md", ".gitignore",
     ".gitattributes", "CITATION.cff", "assets", "skills", "tests", "scripts/validate.py",
-    "docs/sources.md", "docs/examples.md", "docs/evaluation.md", ".github/workflows/validate.yml",
+    "docs/sources.md", "docs/examples.md", "docs/evaluation.md", "docs/AUDITORIA-JURIDICA.md", ".github/workflows/validate.yml",
 )
 LINK = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
 
@@ -42,6 +42,10 @@ def links(path, boundary):
 def validate_skills(root):
     root = Path(root)
     errors, contracts = [], {}
+    repository_license = root / "LICENSE"
+    license_data = repository_license.read_bytes() if repository_license.is_file() else None
+    if license_data is None:
+        errors.append("Missing repository license")
     directory = root / "skills"
     actual = {p.name for p in directory.iterdir() if p.is_dir()} if directory.exists() else set()
     if actual != set(SKILLS):
@@ -49,6 +53,11 @@ def validate_skills(root):
     for name in SKILLS:
         folder = directory / name
         path = folder / "SKILL.md"
+        standalone_license = folder / "LICENSE"
+        if not standalone_license.is_file():
+            errors.append(f"Missing standalone license: {name}")
+        elif license_data is not None and standalone_license.read_bytes() != license_data:
+            errors.append(f"Standalone license differs: {name}")
         if not path.exists():
             errors.append(f"Missing SKILL.md: {name}")
             continue
@@ -80,7 +89,7 @@ def validate_skills(root):
         for file in folder.rglob("*"):
             if file.is_symlink():
                 errors.append(f"Unexpected installed symlink: {file.relative_to(root)}")
-            elif file.is_file() and (file.suffix not in {".md", ".yaml"} or file.name not in {"SKILL.md", "openai.yaml"}):
+            elif file.is_file() and file.relative_to(folder).as_posix() not in {"SKILL.md", "agents/openai.yaml", "LICENSE"}:
                 errors.append(f"Unexpected installed file: {file.relative_to(root)}")
             elif file.is_file() and file.suffix == ".md":
                 errors.extend(links(file, folder))

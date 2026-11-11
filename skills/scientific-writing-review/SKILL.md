@@ -4,7 +4,7 @@ description: Use when a researcher requests scientific manuscript review, claim 
 license: MIT
 metadata:
   author: caiquecato
-  version: "0.1.1"
+  version: "0.1.2"
 ---
 
 # Review a Scientific Manuscript

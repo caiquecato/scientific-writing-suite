@@ -4,7 +4,7 @@ description: Use when a scientific manuscript needs an outline, reordered sectio
 license: MIT
 metadata:
   author: caiquecato
-  version: "0.1.1"
+  version: "0.1.2"
 ---
 
 # Structure a Scientific Manuscript

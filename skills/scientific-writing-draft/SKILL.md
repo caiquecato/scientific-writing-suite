@@ -4,7 +4,7 @@ description: Use when a researcher requests new scientific manuscript prose from
 license: MIT
 metadata:
   author: caiquecato
-  version: "0.1.1"
+  version: "0.1.2"
 ---
 
 # Draft from Evidence

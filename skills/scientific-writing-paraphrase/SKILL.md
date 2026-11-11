@@ -4,7 +4,7 @@ description: Use when a researcher asks to paraphrase, rewrite, clarify, shorten
 license: MIT
 metadata:
   author: caiquecato
-  version: "0.1.1"
+  version: "0.1.2"
 ---
 
 # Paraphrase Faithfully

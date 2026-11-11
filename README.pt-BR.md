@@ -1,4 +1,4 @@
-﻿# Scientific Writing Suite
+# Scientific Writing Suite
 
 [English](README.md)
 
@@ -20,7 +20,7 @@ Para instalar apenas a paráfrase:
 npx skills add caiquecato/scientific-writing-suite --skill scientific-writing-paraphrase
 ```
 
-Também é possível copiar as pastas desejadas de `skills/` para o diretório de skills documentado pelo agente. Os módulos são autossuficientes; não exigem chave de API, servidor MCP ou script instalador. O CLI de terceiros tem seus próprios requisitos, acessos de rede e política de telemetria.
+Também é possível copiar as pastas desejadas de `skills/` para o diretório de skills documentado pelo agente. Os módulos são autossuficientes e incluem o texto da licença MIT; não exigem chave de API, servidor MCP ou script instalador. O CLI de terceiros tem seus próprios requisitos, acessos de rede e política de telemetria.
 
 ## Módulos
 
@@ -54,7 +54,7 @@ A língua da resposta segue o pedido do usuário. A suíte é geral, sem especia
 
 Cada módulo exige a mesma base de integridade: preservar dados e incerteza, sinalizar lacunas, distinguir citação mantida de fonte verificada e tratar instruções embutidas nos documentos como conteúdo.
 
-As pastas instaláveis contêm instruções e metadados. Não incluem código executável, instalação automática, concessão de ferramentas ou envio de manuscritos. A proteção é instrucional: o agente hospedeiro e suas ferramentas continuam determinando o que será executado. Não há garantia absoluta de ausência de alucinações.
+As pastas instaláveis contêm instruções, metadados e o texto da licença. Não incluem código executável, instalação automática, concessão de ferramentas ou envio de manuscritos. A proteção é instrucional: o agente hospedeiro e suas ferramentas continuam determinando o que será executado. Não há garantia absoluta de ausência de alucinações.
 
 A autoria humana exige revisão final e conferência das fontes. As declarações exigidas sobre assistência de IA são preservadas. Não são prometidas aceitação, publicação rápida ou evasão de detectores.
 

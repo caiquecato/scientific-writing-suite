@@ -1,4 +1,4 @@
-﻿"""Structural checks protect packaging invariants, not scientific truth."""
+"""Structural checks protect packaging invariants, not scientific truth."""
 import importlib.util
 import tempfile
 import unittest
@@ -13,9 +13,12 @@ class PackageValidationTests(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory(dir=Path(__file__).resolve().parent)
         self.addCleanup(self.tmp.cleanup)
         self.root = Path(self.tmp.name)
+        license_data = (Path(__file__).resolve().parents[1] / "LICENSE").read_bytes()
+        (self.root / "LICENSE").write_bytes(license_data)
         for name in validation.SKILLS:
             directory = self.root / "skills" / name
             directory.mkdir(parents=True)
+            (directory / "LICENSE").write_bytes(license_data)
             (directory / "SKILL.md").write_text(
                 f"---\nname: {name}\ndescription: Use when reviewing scientific material.\nlicense: MIT\n---\n\n"
                 "# Example\n\n## Integrity contract\n\nGround claims in evidence.\n\n## Task\n\nReturn the requested work.\n",
@@ -38,6 +41,16 @@ class PackageValidationTests(unittest.TestCase):
         folder.mkdir()
         (folder / "openai.yaml").write_bytes(b"\xef\xbb\xbfinterface:\n  display_name: Example\n")
         self.assertTrue(any("UTF-8 BOM" in e for e in self.errors()))
+
+    def test_standalone_license_is_required(self):
+        p = self.root / "skills" / "scientific-writing-draft" / "LICENSE"
+        p.unlink()
+        self.assertTrue(any("Missing standalone license" in e for e in self.errors()))
+
+    def test_standalone_license_matches_repository_grant(self):
+        p = self.root / "skills" / "scientific-writing-draft" / "LICENSE"
+        p.write_bytes(b"Different permission terms")
+        self.assertTrue(any("Standalone license differs" in e for e in self.errors()))
 
     def test_missing_module_is_reported(self):
         (self.root / "skills" / "scientific-writing-draft" / "SKILL.md").unlink()

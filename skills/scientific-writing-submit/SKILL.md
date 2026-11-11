@@ -4,7 +4,7 @@ description: Use when a researcher needs journal-specific manuscript preparation
 license: MIT
 metadata:
   author: caiquecato
-  version: "0.1.1"
+  version: "0.1.2"
 ---
 
 # Prepare a Journal Package

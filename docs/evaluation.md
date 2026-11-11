@@ -1,4 +1,4 @@
-﻿# Evaluation
+# Evaluation
 
 Evaluation date: 11 November 2026. Release candidate: 0.1.0.
 
@@ -38,7 +38,7 @@ To repeat a case, start a fresh context, provide the case prompt and only the se
 
 ## Structural checks
 
-The repository now has nine standard-library unit tests for packaging invariants: a valid BOM-free fixture, rejection of a leading UTF-8 BOM in either SKILL.md or agents/openai.yaml, missing entrypoint, mismatched name, divergent contract, broken local reference, cross-folder dependency and executable payload. These are developer checks, not model evaluations.
+The repository now has eleven standard-library unit tests for packaging invariants: a valid BOM-free fixture, rejection of a leading UTF-8 BOM in either SKILL.md or agents/openai.yaml, missing entrypoint, mismatched name, divergent contract, broken local reference, cross-folder dependency, executable payload, missing standalone license and divergent standalone license. These are developer checks, not model evaluations.
 
 The initial evaluation used a BOM-aware adapter around the skill-creator validator. That adapter masked a real compatibility defect: the user later reported that Codex Desktop rejected the BOM-prefixed entrypoints. The listing-only Skills CLI check below did not establish Codex loader compatibility. Version 0.1.1 removes the leading BOM from all 14 installable files and adds byte-level regression checks. The unmodified skill-creator validator is used for the corrected entrypoints.
 
@@ -58,3 +58,5 @@ The repository validator checks its own simple single-line metadata, contract co
 Scoring was manual and not blinded. The case set is small, some requests overlap, and the seven baseline task answers share one context. No empirical reduction in hallucination rate is established. There are no medical, legal or other high-stakes domain certifications.
 
 Instruction-level restrictions do not enforce the host's tool boundary. Human authors must check the final manuscript, source support, disclosures and submission declarations.
+
+Version 0.1.2 adds license texts to the standalone packages and two packaging regression tests. This legal-documentation change does not add behavioral evaluation samples.

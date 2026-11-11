@@ -1,4 +1,8 @@
-﻿# Changelog
+# Changelog
+
+## 0.1.2 — 2026-11-11
+
+Bundled the MIT license in each standalone skill, added regression checks for missing or divergent license notices, clarified the scope of third-party rights and scholarly citation requests, and recorded a scoped legal review. Scientific instructions remain unchanged.
 
 ## 0.1.1 — 2026-11-11
 
