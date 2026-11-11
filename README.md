@@ -121,5 +121,3 @@ Useful contributions include reproducible failure cases, narrower instructions a
 ## License and acknowledgments
 
 Original project material is licensed under [MIT](LICENSE), © 2026 Caique dos Santos Aguiar. Referenced works retain their own rights; no full papers are distributed. See [third-party notices](THIRD_PARTY_NOTICES.md).
-
-Repository presentation was informed by the clear installation and usage organization of [taste-skill](https://github.com/Leonxlnx/taste-skill). This suite is an independent project, with original wording and artwork.
