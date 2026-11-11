@@ -23,4 +23,4 @@ Read [evaluation](docs/evaluation.md), [sources](docs/sources.md) and [security]
 
 ## Text encoding
 
-Authored text files use UTF-8 with a leading BOM for Windows compatibility. Readers and validators must decode with `utf-8-sig` or explicitly normalize a temporary copy. Never insert BOM characters inside prose.
+Installable `SKILL.md` and `agents/openai.yaml` files must use UTF-8 **without a BOM**. `SKILL.md` must begin directly with `---`; bytes before that delimiter can prevent Codex from recognizing its frontmatter. The repository validator rejects a leading BOM in either installed file type. Do not normalize or strip a BOM before validating these files: that hides the defect. Other documents may use UTF-8 with a BOM when their consumers support it.

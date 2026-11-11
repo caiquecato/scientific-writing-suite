@@ -1,10 +1,10 @@
-﻿---
+---
 name: scientific-writing-plan
 description: Use when a researcher needs a scientific paper plan, a central research question, a contribution statement or a map of evidence gaps before drafting.
 license: MIT
 metadata:
   author: caiquecato
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Plan a Scientific Paper

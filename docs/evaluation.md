@@ -38,9 +38,9 @@ To repeat a case, start a fresh context, provide the case prompt and only the se
 
 ## Structural checks
 
-The repository has seven standard-library unit tests for packaging invariants: a valid BOM-encoded fixture, missing entrypoint, mismatched name, divergent contract, broken local reference, cross-folder dependency and executable payload. These are developer checks, not model evaluations.
+The repository now has nine standard-library unit tests for packaging invariants: a valid BOM-free fixture, rejection of a leading UTF-8 BOM in either SKILL.md or agents/openai.yaml, missing entrypoint, mismatched name, divergent contract, broken local reference, cross-folder dependency and executable payload. These are developer checks, not model evaluations.
 
-The bundled skill-creator validator accepted all seven entrypoints with a BOM-aware reading adapter. Its original reader did not account for the leading UTF-8 BOM used by this project; no upstream script was changed.
+The initial evaluation used a BOM-aware adapter around the skill-creator validator. That adapter masked a real compatibility defect: the user later reported that Codex Desktop rejected the BOM-prefixed entrypoints. The listing-only Skills CLI check below did not establish Codex loader compatibility. Version 0.1.1 removes the leading BOM from all 14 installable files and adds byte-level regression checks. The unmodified skill-creator validator is used for the corrected entrypoints.
 
 The Skills CLI 1.8.1 successfully discovered all seven local skills with `skills add <local-path> --list`. This was a listing-only check, not an installation into a user's agent or an end-to-end hosted-agent test.
 

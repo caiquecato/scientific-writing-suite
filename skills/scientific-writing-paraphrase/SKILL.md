@@ -1,10 +1,10 @@
-﻿---
+---
 name: scientific-writing-paraphrase
 description: Use when a researcher asks to paraphrase, rewrite, clarify, shorten or improve the style of an existing scientific passage while retaining its meaning.
 license: MIT
 metadata:
   author: caiquecato
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Paraphrase Faithfully

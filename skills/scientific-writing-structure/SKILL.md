@@ -1,10 +1,10 @@
-﻿---
+---
 name: scientific-writing-structure
 description: Use when a scientific manuscript needs an outline, reordered sections, a clearer argument or a map between claims and supporting evidence.
 license: MIT
 metadata:
   author: caiquecato
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Structure a Scientific Manuscript

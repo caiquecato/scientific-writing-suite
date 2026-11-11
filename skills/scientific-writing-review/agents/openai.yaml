@@ -1,4 +1,4 @@
-﻿interface:
+interface:
   display_name: "Scientific Writing · Review"
   short_description: "Review claims, citations and scientific reasoning"
   default_prompt: "Use $scientific-writing-review for my manuscript, grounding the output in the evidence provided."

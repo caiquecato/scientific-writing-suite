@@ -1,10 +1,10 @@
-﻿---
+---
 name: scientific-writing-review
 description: Use when a researcher requests scientific manuscript review, claim checking, citation-support checking or feedback on reasoning, reporting and prose.
 license: MIT
 metadata:
   author: caiquecato
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Review a Scientific Manuscript

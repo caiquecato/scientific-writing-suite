@@ -1,4 +1,4 @@
-﻿interface:
+interface:
   display_name: "Scientific Writing · Submit"
   short_description: "Prepare journal documents and reviewer responses"
   default_prompt: "Use $scientific-writing-submit for my manuscript, grounding the output in the evidence provided."

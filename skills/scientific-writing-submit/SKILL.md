@@ -1,10 +1,10 @@
-﻿---
+---
 name: scientific-writing-submit
 description: Use when a researcher needs journal-specific manuscript preparation, a cover letter, a submission checklist or a point-by-point response to reviewers.
 license: MIT
 metadata:
   author: caiquecato
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Prepare a Journal Package

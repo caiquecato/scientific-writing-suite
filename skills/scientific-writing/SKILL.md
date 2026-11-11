@@ -1,10 +1,10 @@
-﻿---
+---
 name: scientific-writing
 description: Use when a researcher requests a complete scientific-writing workflow or needs coordinated help across planning, manuscript structure, drafting, paraphrasing, review and journal preparation.
 license: MIT
 metadata:
   author: caiquecato
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Scientific Writing

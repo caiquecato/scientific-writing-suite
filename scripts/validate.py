@@ -52,7 +52,12 @@ def validate_skills(root):
         if not path.exists():
             errors.append(f"Missing SKILL.md: {name}")
             continue
-        text = path.read_text(encoding="utf-8-sig")
+        for installed_file in folder.rglob("*"):
+            if installed_file.is_file() and installed_file.suffix in {".md", ".yaml"}:
+                if installed_file.read_bytes().startswith(b"\xef\xbb\xbf"):
+                    errors.append(f"UTF-8 BOM is not allowed in installed metadata: {installed_file.relative_to(root)}")
+        # Inspect the literal frontmatter boundary; stripping a BOM masks host incompatibility.
+        text = path.read_text(encoding="utf-8")
         header = re.match(r"^---\n(.*?)\n---\n", text, re.S)
         if not header:
             errors.append(f"Invalid frontmatter boundary: {name}")

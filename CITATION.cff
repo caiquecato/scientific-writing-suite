@@ -5,7 +5,7 @@ type: software
 authors:
   - family-names: "Aguiar"
     given-names: "Caique dos Santos"
-version: "0.1.0"
+version: "0.1.1"
 date-released: "2026-11-11"
 url: "https://github.com/caiquecato/scientific-writing-suite"
 license: MIT

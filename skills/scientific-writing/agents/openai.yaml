@@ -1,4 +1,4 @@
-﻿interface:
+interface:
   display_name: "Scientific Writing"
   short_description: "Coordinate evidence-grounded scientific writing"
   default_prompt: "Use $scientific-writing to prepare my manuscript while preserving evidence and flagging gaps."

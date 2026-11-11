@@ -1,10 +1,10 @@
-﻿---
+---
 name: scientific-writing-draft
 description: Use when a researcher requests new scientific manuscript prose from supplied study records, results, notes or identified literature.
 license: MIT
 metadata:
   author: caiquecato
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Draft from Evidence
