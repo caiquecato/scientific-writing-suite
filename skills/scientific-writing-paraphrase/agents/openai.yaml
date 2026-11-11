@@ -1,0 +1,4 @@
+﻿interface:
+  display_name: "Scientific Writing · Paraphrase"
+  short_description: "Rewrite faithfully, preserving evidence and voice"
+  default_prompt: "Use $scientific-writing-paraphrase for my manuscript, grounding the output in the evidence provided."

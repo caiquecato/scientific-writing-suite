@@ -1,0 +1,4 @@
+﻿interface:
+  display_name: "Scientific Writing · Draft"
+  short_description: "Draft scientific prose without filling factual gaps"
+  default_prompt: "Use $scientific-writing-draft for my manuscript, grounding the output in the evidence provided."

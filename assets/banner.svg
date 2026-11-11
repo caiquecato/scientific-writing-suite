@@ -1,0 +1,20 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="520" viewBox="0 0 1600 520" role="img" aria-labelledby="title desc">
+<title id="title">Scientific Writing Suite</title><desc id="desc">Keep the evidence. Improve the writing. Seven independent skills for scientific manuscripts.</desc>
+<rect width="1600" height="520" fill="#f3f0e8"/>
+<path d="M64 64H1536" stroke="#263b36" stroke-width="2"/>
+<text x="64" y="103" fill="#263b36" font-family="Arial, sans-serif" font-size="19" letter-spacing="4">SCIENTIFIC WRITING SUITE</text>
+<text x="61" y="223" fill="#263b36" font-family="Georgia, serif" font-size="94">Keep the evidence.</text>
+<text x="61" y="329" fill="#263b36" font-family="Georgia, serif" font-size="94">Improve the writing.</text>
+<path d="M68 350H879" stroke="#ab543b" stroke-width="5"/>
+<text x="66" y="405" fill="#4d5a51" font-family="Arial, sans-serif" font-size="25">Seven independent skills. One integrity contract.</text>
+<path d="M64 450H1536" stroke="#b5bcb2"/>
+<text x="65" y="488" fill="#4d5a51" font-family="Arial, sans-serif" font-size="17" letter-spacing="1">PLAN / STRUCTURE / DRAFT / PARAPHRASE / REVIEW / SUBMIT</text>
+<text x="1535" y="488" text-anchor="end" fill="#4d5a51" font-family="Arial, sans-serif" font-size="17">caiquecato</text>
+<g transform="translate(1170 154)">
+<rect x="21" y="-11" width="290" height="226" rx="2" fill="none" stroke="#bdc5b9"/>
+<rect width="290" height="226" rx="2" fill="#faf8f2" stroke="#8c9b8e" stroke-width="2"/>
+<text x="27" y="43" fill="#263b36" font-family="Arial, sans-serif" font-size="15" letter-spacing="2">EVIDENCE RECORD</text>
+<path d="M28 73H254M28 98H226M28 123H254M28 148H195" stroke="#9ba89a" stroke-width="3"/>
+<path d="M27 170H198" stroke="#ab543b" stroke-width="3"/>
+<text x="27" y="200" fill="#263b36" font-family="Georgia, serif" font-size="19">Claims stay accountable.</text>
+</g></svg>

@@ -1,0 +1,15 @@
+﻿/dados_brutos/
+/planilhas/
+/graficos/
+/scratch/
+/historico/
+/docs/base_bibliografica.md
+/docs/proposta_skill.md
+/docs/plano_implementacao.md
+/scripts/*.local.py
+__pycache__/
+*.pyc
+.env
+.env.*
+*.pdf
+*.zip
